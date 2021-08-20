@@ -1,0 +1,27 @@
+- name: neovim installation
+  ansible.builtin.git:
+    repo: 'https://github.com/neovim/neovim.git'
+    dest: "{{ lookup('env', 'HOME') }}/neovim"
+  tags:
+    - install
+    - neovim
+- name: build neovim
+  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make"
+  tags:
+    - install
+    - neovim
+- name: install neovim
+  shell: "cd {{ lookup('env', 'HOME') }}/neovim && make install"
+  tags:
+    - install
+    - neovim
+- name: neovim plugin development 1
+  apt: name=luarocks
+  tags:
+    - install
+    - neovim
+- name: Neovim Plugin Development 2 luacheck
+  shell: luarocks install luacheck
+  tags:
+    - install
+    - neovim

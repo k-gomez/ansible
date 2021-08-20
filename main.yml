@@ -1,0 +1,19 @@
+- hosts: localhost
+  become: true
+  vars:
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME') }}"/.ssh/id_rsa # location of id_rsa und id_rsa.pub
+  pre_tasks:
+    - name: update repos
+      apt: update_cache=yes # update_cache=yes tells Ansible’s apt module to refresh the caches before applying whatever change is necessary (if any).
+      changed_when: False
+  tasks:
+    - include: tasks/ssh.yml            # todo
+    - include: tasks/core-setup.yml     # todo
+    - include: tasks/node-setup.yml     # todo
+    - include: tasks/npm-packages.yml   # todo
+    - include: tasks/zsh-setup.yml      # todo
+    - include: tasks/slack-setup.yml    # todo
+    - include: tasks/nvim-setup.yml     # todo
+    - include: tasks/brave.yml          # todo
+    - include: tasks/dotfiles.yml       # todo
