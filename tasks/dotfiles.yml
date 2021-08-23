@@ -4,13 +4,14 @@
     - install
     - dotfiles
 - name: cloning .dotfiles
-  ansible.builtin.git:
+  git:
     repo: 'git@github.com:kgbuquerin/.dotfiles.git'
     dest: "{{ lookup('env', 'HOME') }}/.dotfiles"
     recursive: yes
     update: yes
-    accept_hostkey: yes
-    version: master
+    #accept_hostkey: yes
+    clone: yes
+    version: main
   tags:
     - install
     - dotfiles
