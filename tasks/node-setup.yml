@@ -1,8 +1,6 @@
 - name: install node & npm
-  apt: name={{item}}
-  with_items:
-    - nodejs
-    - npm
+  apt: 
+    name: ['nodejs', 'npm']
   tags:
     - install
     - node

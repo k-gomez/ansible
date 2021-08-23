@@ -1,41 +1,20 @@
 - name: Install System Packages 1 (build-essential, cmake, pkg-config, pthread)
-  apt: name={{item}}
-  with_items:
-      - build-essential
-      - cmake
-      - pkg-config
-      - libpthread-stubs0-dev
+  apt: 
+    name: ['build-essential', 'cmake', 'pkg-config', 'libpthread-stubs0-dev']
   tags:
     - install
     - neovim
     - core
 - name: Install System Packages 2 (lua, unzip, libtool, libtool-bin, gettext)
-  apt: name={{item}}
-  with_items:
-      - lua5.1
-      - unzip
-      - libtool
-      - libtool-bin
-      - gettext
+  apt: 
+    name: ['lua5.1', 'unzip', 'libtool', 'libtool-bin', 'gettext']
   tags:
     - install
     - neovim
     - core
 - name: Install System Packages 3 (the rest)
-  apt: name={{item}}
-  with_items:
-    - curl
-    - htop
-    - golang
-    - lsof
-    - i3
-    - ccache
-    - ninja-build
-    - python3-pip
-    - dconf-editor
-    - clangd
-    - ffmpeg
-    - xsel
+  apt: 
+    name: ['curl', 'htop', 'golang', 'lsof', 'i3', 'ccache', 'ninja-build', 'python3-pip', 'dconf-editor', 'pavucontrol', 'clangd', 'ffmpeg', 'xsel'] with_items:
   tags:
     - install
     - core
