@@ -1,8 +1,13 @@
 - hosts: localhost
   become: true
   vars:
+<<<<<<< HEAD
     #source_key: "./.ssh/id_ed25519"
     #dest_key: "{{ lookup('env', 'HOME') }}"/.ssh/id_rsa # location of id_rsa und id_rsa.pub
+=======
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519" # location of id_rsa und id_rsa.pub
+>>>>>>> 6fa879d3dbf0aac9a9fcee792ef636122b539d02
   pre_tasks:
     - name: update repos
       apt: update_cache=yes # update_cache=yes tells Ansible’s apt module to refresh the caches before applying whatever change is necessary (if any).
