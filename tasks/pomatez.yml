@@ -1,0 +1,22 @@
+- name: download pomatez 
+  get_url:
+    url: https://github.com/roldanjr/pomatez/releases/download/v1.1.0/Pomatez-v1.1.0-linux.deb
+    dest: /tmp/pomatez.deb
+  tags:
+    - install
+    - pomatez 
+
+- name: remove any previous pomatez 
+  apt:
+    name: pomatez 
+    state: absent
+  tags:
+    - install
+    - pomatez
+
+- name: install pomatez .deb package
+  apt:
+    deb: /tmp/pomatez.deb
+  tags:
+    - install
+    - pomatez

@@ -14,4 +14,5 @@
     - include: tasks/nvim-setup.yml     
     - include: tasks/jabref.yml
     - include: tasks/hugo.yml
+    - include: tasks/pomatez.yml
     - include: tasks/dotfiles.yml       
