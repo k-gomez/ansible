@@ -1,0 +1,29 @@
+- name: create directory for hugo
+  file:
+     path: /etc/hugo
+     state: directory
+  tags:
+     - install
+     - hugo
+
+- name: clone hugo
+  git:
+     repo: https://github.com/gohugoio/hugo.git
+     dest: /etc/hugo
+     clone: yes
+     update: yes
+  tags:
+     - install
+     - hugo
+
+- name: go to dirctory
+  command: chdir=/etc/hugo
+  tags:
+     - install
+     - hugo
+
+- name: install go
+  shell: go install --tags extended
+  tags:
+     - install
+     - hugo
