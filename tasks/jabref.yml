@@ -1,0 +1,22 @@
+- name: download jabref 
+  get_url:
+    url: https://www.fosshub.com/JabRef.html?dwl=jabref_5.3-1_amd64.deb
+    dest: /tmp/jabref.deb
+  tags:
+    - install
+    - jabref
+
+- name: remove any previous jabref 
+  apt:
+    name: JabRef 
+    state: absent
+  tags:
+    - install
+    - jabref
+
+- name: install jabref .deb package
+  apt:
+    deb: /tmp/jabref.deb
+  tags:
+    - install
+    - jabref 
