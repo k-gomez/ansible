@@ -19,10 +19,10 @@
     - productivity
     - dotfiles
     - zsh
-- name: symlink for zsh-config
-  shell: ls -s ~/.config/zsh/.zshrc ~/.zshrc
-  tags:
-    - install
-    - productivity
-    - dotfiles
-    - zsh
+#- name: symlink for zsh-config
+#  shell: ls -s ~/.config/zsh/.zshrc ~/.zshrc
+#  tags:
+#    - install
+#    - productivity
+#    - dotfiles
+#    - zsh
