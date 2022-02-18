@@ -10,9 +10,9 @@
     - include: tasks/node-setup.yml     
     - include: tasks/npm-packages.yml   
     - include: tasks/zsh-setup.yml      
-    - include: tasks/slack-setup.yml    
+    #- include: tasks/slack-setup.yml    # will be installed manually
     - include: tasks/nvim-setup.yml     
-    - include: tasks/jabref.yml
-    - include: tasks/hugo.yml
-    - include: tasks/pomatez.yml
+    #- include: tasks/jabref.yml   #  will be installed manually
+    #- include: tasks/hugo.yml      #  will be installed manually
+    #- include: tasks/pomatez.yml   #  will be installed manually
     - include: tasks/dotfiles.yml       
