@@ -6,10 +6,11 @@
     - dotfiles
 - name: cloning .dotfiles
   git:
-    repo: 'git@github.com:k-gomez/.dotfiles.git'
+    repo: https://github.com/k-gomez/.dotfiles.git
     dest: "{{ lookup('env', 'HOME') }}/.config"
     recursive: yes
     clone: yes
+    update: yes
   tags:
     - install
     - dotfiles
