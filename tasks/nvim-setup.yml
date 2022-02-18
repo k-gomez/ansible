@@ -15,13 +15,14 @@
   tags:
     - install
     - neovim
-- name: neovim plugin development 1
-  apt: name=luarocks
-  tags:
-    - install
-    - neovim
-- name: Neovim Plugin Development 2 luacheck
-  shell: luarocks install luacheck
-  tags:
-    - install
-    - neovim
+# I don't think that I need this
+#- name: neovim plugin development 1
+#  apt: name=luarocks
+#  tags:
+#    - install
+#    - neovim
+#- name: Neovim Plugin Development 2 luacheck
+#  shell: luarocks install luacheck
+#  tags:
+#    - install
+#    - neovim
