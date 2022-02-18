@@ -9,3 +9,5 @@ sudo apt install ansible
 
 ## pull ansible
 #sudo ansible-pull -U https://github.com/k-gomez/ansible.git # does not work
+echo "Run the playbook like this:"
+echo "\$ ansible-playbook main.yml"
