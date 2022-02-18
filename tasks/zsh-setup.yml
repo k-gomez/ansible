@@ -1,4 +1,4 @@
-- name: instlal zsh requirements
+- name: install zsh requirements
   become: yes
   apt: 
     name: ['curl', 'wget', 'git']
