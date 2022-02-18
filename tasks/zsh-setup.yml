@@ -1,19 +1,23 @@
-- name: install zsh 
+- name: instlal zsh requirements
+  become: yes
+  apt: ['curl', 'wget', 'git']
+  tags:
+    - install
+    - core
+    - zsh
+- name: install zsh
   apt: name=zsh
   tags:
     - install
     - productivity
     - dotfiles
     - zsh
-- name: Change shell to zsh
-  shell: chsh -s $(which zsh)
-  tags:
-    - install
-    - dotfiles
-    - productivity
-    - zsh
-- name: change shell to zsh
-  shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    
+- name: Install oh-my-zsh
+  shell:
+    cmd: 'curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)'
+- name: Change shell
+  shell: /bin/zsh  
   tags:
     - install
     - productivity
