@@ -1,6 +1,7 @@
 - name: instlal zsh requirements
   become: yes
-  apt: ['curl', 'wget', 'git']
+  apt: 
+    name: ['curl', 'wget', 'git']
   tags:
     - install
     - core
