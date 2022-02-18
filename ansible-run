@@ -8,4 +8,4 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 
 ## pull ansible
-sudo ansible-pull -U https://github.com/k-gomez/ansible.git
+#sudo ansible-pull -U https://github.com/k-gomez/ansible.git # does not work
